@@ -1,85 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday AMMA!</title>
+  <meta charset="UTF-8">
+  <title>பிறந்த நாள் வாழ்த்து!</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #ffe0e9, #ffccf9);
       text-align: center;
-      overflow-x: hidden;
+      background-color: #fff4f4;
+      font-family: "Segoe UI", sans-serif;
+      padding: 40px;
     }
     h1 {
-      margin-top: 50px;
+      color: #c2185b;
       font-size: 3em;
-      color: #d6336c;
+      margin-bottom: 10px;
     }
-    .message {
-      font-size: 1.5em;
-      margin: 20px auto;
-      max-width: 600px;
+    p {
+      font-size: 1.3em;
       color: #333;
     }
-    .cake-container {
-      position: relative;
-      margin: 40px auto;
-      width: 200px;
-    }
-    .cake {
-      width: 100%;
-      cursor: pointer;
-    }
-    .confetti {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 999;
-    }
-    .button {
-      background: #ff66a3;
+    button {
+      background-color: #ff4081;
       color: white;
-      border: none;
-      padding: 15px 30px;
+      padding: 12px 24px;
       font-size: 1.2em;
-      border-radius: 10px;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      margin-top: 20px;
     }
-    .button:hover {
-      background: #e05591;
+    img {
+      width: 250px;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <h1>Happy Birthday AMMA! 🎉</h1>
-  <div class="message">
-    Wishing you endless love, joy, and laughter. You mean the world to me. 💖
-  </div>
-  <div class="cake-container">
-    <img src="https://i.imgur.com/w1URoQC.png" alt="Birthday Cake" class="cake" id="cake" />
-  </div>
-  <button class="button" onclick="cutCake()">🎂 Click to Cut the Cake</button>
 
-  <canvas class="confetti" id="confetti"></canvas>
+  <h1>அம்மா, பிறந்த நாள் வாழ்த்துகள்! 🎉</h1>
+  <p>உங்களுக்கு என் இதயங்கனிந்த வாழ்த்துகள் மற்றும் ஆசிகள்!</p>
 
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <img id="cake" src="https://i.imgur.com/OdL0XPt.png" alt="Birthday Cake">
+
+  <br>
+  <button onclick="cutCake()">கேக் வெட்டுங்கள் 🎂</button>
+
   <script>
     function cutCake() {
-      const cake = document.getElementById("cake");
-      cake.src = "https://i.imgur.com/1cV3UeM.png"; // cut cake image
-      confetti({
-        particleCount: 150,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      document.getElementById("cake").src = "https://i.imgur.com/6VjDsmA.png";
+      alert("கேக் வெட்டப்பட்டது! 🎉 அன்புடன் வாழ்த்துகள் அம்மா!");
     }
   </script>
+
 </body>
 </html>
